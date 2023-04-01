@@ -2,9 +2,11 @@ dockerfile: blueprint to build docker images. it contains all info for the image
 
 images: template to run docker containers
 
-containers: a running process
+containers: a running process in an isolated environment. use the os of the host
 
 volume: a shared folder on host computer with files that multiple containers can use to interact
+
+docker: a platform for building, running and shipping applications
 
 [-] 1 Process per container is preferable.
 [+] Docker compose used to run multiple containers at the same time.
@@ -12,3 +14,9 @@ volume: a shared folder on host computer with files that multiple containers can
 [+] Docker destop has logs for debugging, cli for inspection of code.
 [+] Each container has an unique id and is linked to an image. 
 [+] When multiple containers are used, kubernetes or swarm are used.
+[+] Virtual Machines are slow and resource intensive.
+
+Docker Architecture
+- Client server model
+- Server or Docker engine takes care of building docker containers
+- Docker on mac uses a ightweight Linux VM to host containers 
