@@ -1,0 +1,10 @@
+CMD
+
+docker ps
+docker images
+docker run <image_name>
+docker build <dockerfile_path>
+
+docker volume create <volume_name>
+docker compose up
+docker compose down

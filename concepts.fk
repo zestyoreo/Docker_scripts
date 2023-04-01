@@ -1,0 +1,14 @@
+dockerfile: blueprint to build docker images. it contains all info for the image to be built
+
+images: template to run docker containers
+
+containers: a running process
+
+volume: a shared folder on host computer with files that multiple containers can use to interact
+
+[-] 1 Process per container is preferable.
+[+] Docker compose used to run multiple containers at the same time.
+[+] A docker-compose.yml file used to specify all containers and volumes (configuration) used to run multiple procs.
+[+] Docker destop has logs for debugging, cli for inspection of code.
+[+] Each container has an unique id and is linked to an image. 
+[+] When multiple containers are used, kubernetes or swarm are used.
