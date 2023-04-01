@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://dockerlabs.collabnix.com/docker/cheatsheet/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Ultimate Docker Cheat Sheet | dockerlabs</title>
+<meta name="generator" content="Jekyll v3.9.3">
+<meta property="og:title" content="The Ultimate Docker Cheat Sheet">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Docker - Beginners Intermediate Advanced">
+<meta property="og:description" content="Docker - Beginners Intermediate Advanced">
+<link rel="canonical" href="https://dockerlabs.collabnix.com/docker/cheatsheet/">
+<meta property="og:url" content="https://dockerlabs.collabnix.com/docker/cheatsheet/">
+<meta property="og:site_name" content="dockerlabs">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="The Ultimate Docker Cheat Sheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Docker - Beginners Intermediate Advanced","headline":"The Ultimate Docker Cheat Sheet","url":"https://dockerlabs.collabnix.com/docker/cheatsheet/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/style.css">
+  <script charset="utf-8" src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/timeline.16b53cc33aaa562f8f41a495bf720289.js"></script></head>
+  <body data-new-gr-c-s-check-loaded="14.1102.0" data-gr-ext-installed="">
+   
+
+    <header class="page-header" role="banner">
+      <center><a href="http://dockerlabs.collabnix.com/"><img src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/moby_large.png"></a></center>
+      <!-- Place this tag where you want the button to render. -->
+<span></span>
+      <!-- Place this tag where you want the button to render. -->
+<span></span>
+     <!-- Place this tag where you want the button to render. -->
+<span></span>
+      <!-- Place this tag where you want the button to render. -->
+<span></span>
+      <h1 class="project-name">The Ultimate Docker Cheat Sheet</h1>
+      <h2 class="project-tagline">Docker  - Beginners | Intermediate | Advanced</h2> 
+      
+        <a href="https://github.com/collabnix/dockerlabs" class="btn">View on GitHub</a>
+      
+      
+        <a href="https://join.slack.com/t/collabnix/shared_invite/zt-1gank9ask-YM4ZbCtRq2id9G2o01ItgA" class="btn">Join Slack</a>
+     
+      
+        <a href="https://collabnix.com/docker-cheatsheet/" class="btn">Docker Cheatsheet</a>
+     
+        
+        <a href="https://collabnix.com/docker-compose-cheatsheet/" class="btn">Docker Compose Cheatsheet</a>
+     
+        
+        <a href="https://twitter.com/collabnix" class="btn">Follow us on Twitter</a>
+     
+          
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      
+      <h1 id="the-ultimate-docker-cheat-sheet">The Ultimate Docker Cheat Sheet</h1>
+
+<p><img src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/210130087-62a755f7-499c-4f5a-a91c-9151ac82417e.png" alt="docker_cheatsheet"></p>
+
+<p>A cheatsheet is a concise summary of important information that is meant to be used as a quick reference. Cheatsheets are often used in the form of a list or a table, and they typically cover a specific topic or subject area. In the context of Docker, a Docker cheatsheet is a summary of commonly used Docker commands and their options, as well as other useful information related to Docker.</p>
+
+<p>Cheatsheets can be particularly helpful when learning a new tool or technology, as they provide a convenient way to quickly look up and remind oneself of key concepts and commands. They can also be useful for experienced users who need to recall a specific command or option but may not remember all the details.</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul>
+  <li><a href="https://dockerlabs.collabnix.com/docker/cheatsheet/#categories">Categories</a>
+    <ul>
+      <li>🐳 <a href="https://dockerlabs.collabnix.com/docker/cheatsheet/#basic-docker-clis">Basic Docker CLIs</a></li>
+      <li>🧰 <a href="https://dockerlabs.collabnix.com/docker/cheatsheet/#container-management-clis">Container Management CLIs</a></li>
+      <li>🧑‍💻 <a href="https://dockerlabs.collabnix.com/docker/cheatsheet/#inspecting-the-container">Inspecting the Container</a></li>
+      <li>🧑‍💻 <a href="https://dockerlabs.collabnix.com/docker/cheatsheet/#interacting-with-container">Interacting with Container</a></li>
+      <li>🫙 <a href="https://dockerlabs.collabnix.com/docker/cheatsheet/#image-management-commands">Image Management Commands </a></li>
+      <li>🧪 <a href="https://dockerlabs.collabnix.com/docker/cheatsheet/#image-transfer-commands">Image Transfer Commands</a></li>
+      <li>🏗️ <a href="https://dockerlabs.collabnix.com/docker/cheatsheet/#builder-main-commands">Builder Main Commands</a></li>
+      <li>⚙️ <a href="https://dockerlabs.collabnix.com/docker/cheatsheet/#the-docker-cli">The Docker CLI</a></li>
+    </ul>
+  </li>
+  <li>🧑‍🤝‍🧑 <a href="https://dockerlabs.collabnix.com/docker/cheatsheet/#contributors">Contributors</a></li>
+  <li>💬 <a href="https://dockerlabs.collabnix.com/docker/cheatsheet/#support-and-community">Support and Community</a></li>
+  <li>👉 <a href="https://dockerlabs.collabnix.com/docker/cheatsheet/#references">References</a></li>
+</ul>
+
+<h2 id="basic-docker-clis">Basic Docker CLIs</h2>
+
+<p>Here’s the list of the basic Docker commands that works on both Docker Desktop as well as Docker Engine:</p>
+
+<p><img src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/dockercheatsheet8.png" alt="full"></p>
+
+<p><br>
+<br></p>
+
+<h2 id="container-management-clis">Container Management CLIs</h2>
+
+<p>Here’s the list of the Docker commands that manages Docker images and containers flawlessly:</p>
+
+<p><br></p>
+
+<p><img src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/dockercheatsheet1.png" alt="container_management"></p>
+
+<h2 id="inspecting-the-container">Inspecting The Container</h2>
+
+<p>Here’s the list of the basic Docker commands that helps you inspect the containers seamlessly:</p>
+
+<p><br></p>
+
+<p><img src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/dockercheatsheet3.png" alt="Inspecting The Container"></p>
+
+<h2 id="interacting-with-container">Interacting with Container</h2>
+
+<p>Do you want to know how to access the containers? Check out these fundamental commands:</p>
+
+<p><img src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/dockercheatsheet4.png" alt="Interacting with Container1"></p>
+
+<h2 id="image-management-commands">Image Management Commands</h2>
+
+<p>Here’s the list of Docker commands that helps you manage the Docker Images:</p>
+
+<p><br></p>
+
+<p><img src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/dockercheatsheet5.png" alt="image management commands"></p>
+
+<h2 id="image-transfer-commands">Image Transfer Commands</h2>
+
+<p>Here’s the list of Docker image transfer commands:</p>
+
+<p><br></p>
+
+<p><img src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/dockercheatsheet6.png" alt="Image Transfer Comnands"></p>
+
+<h2 id="builder-main-commands">Builder Main Commands</h2>
+
+<p>Want to know how to build Docker Image? Do check out the list of Image Build Commands:</p>
+
+<p><br></p>
+
+<p><img src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/dockercheatsheet7.png" alt="Builder Main Commands"></p>
+
+<h2 id="the-docker-cli">The Docker CLI</h2>
+
+<h2 id="manage-images">Manage images</h2>
+<p><br></p>
+
+<h3 id="docker-build"><code class="language-plaintext highlighter-rouge">docker build</code></h3>
+<p><br></p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">docker build [options] .</span>
+  <span class="s">-t "app/container_name"</span>    <span class="c1"># name</span>
+</code></pre></div></div>
+
+<p>Create an <code class="language-plaintext highlighter-rouge">image</code> from a Dockerfile.</p>
+
+<h3 id="docker-run"><code class="language-plaintext highlighter-rouge">docker run</code></h3>
+<p><br></p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">docker run [options] IMAGE</span>
+  <span class="s"># see `docker create` for options</span>
+</code></pre></div></div>
+
+<p>Run a command in an <code class="language-plaintext highlighter-rouge">image</code>.</p>
+
+<h2 id="manage-containers">Manage containers</h2>
+
+<p><br></p>
+
+<h3 id="docker-create"><code class="language-plaintext highlighter-rouge">docker create</code></h3>
+<p><br></p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">docker create [options] IMAGE</span>
+  <span class="s">-a, --attach</span>               <span class="c1"># attach stdout/err</span>
+  <span class="s">-i, --interactive</span>          <span class="c1"># attach stdin (interactive)</span>
+  <span class="s">-t, --tty</span>                  <span class="c1"># pseudo-tty</span>
+      <span class="s">--name NAME</span>            <span class="c1"># name your image</span>
+  <span class="s">-p, --publish 5000:5000</span>    <span class="c1"># port map</span>
+      <span class="s">--expose </span><span class="m">5432</span>          <span class="c1"># expose a port to linked containers</span>
+  <span class="s">-P, --publish-all</span>          <span class="c1"># publish all ports</span>
+      <span class="s">--link container:alias</span> <span class="c1"># linking</span>
+  <span class="s">-v, --volume `pwd`:/app</span>    <span class="c1"># mount (absolute paths needed)</span>
+  <span class="s">-e, --env NAME=hello</span>       <span class="c1"># env vars</span>
+</code></pre></div></div>
+
+<h4 id="example">Example</h4>
+<p><br></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker create --name app_redis_1 \
+  --expose 6379 \
+  redis:3.0.2
+</code></pre></div></div>
+
+<p>Create a <code class="language-plaintext highlighter-rouge">container</code> from an <code class="language-plaintext highlighter-rouge">image</code>.</p>
+
+<h3 id="docker-exec"><code class="language-plaintext highlighter-rouge">docker exec</code></h3>
+<p><br></p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">docker exec [options] CONTAINER COMMAND</span>
+  <span class="s">-d, --detach</span>        <span class="c1"># run in background</span>
+  <span class="s">-i, --interactive</span>   <span class="c1"># stdin</span>
+  <span class="s">-t, --tty</span>           <span class="c1"># interactive</span>
+</code></pre></div></div>
+
+<h4 id="example-1">Example</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker exec app_web_1 tail logs/development.log
+$ docker exec -t -i app_web_1 rails c
+</code></pre></div></div>
+
+<p>Run commands in a <code class="language-plaintext highlighter-rouge">container</code>.</p>
+
+<h3 id="docker-start"><code class="language-plaintext highlighter-rouge">docker start</code></h3>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">docker start [options] CONTAINER</span>
+  <span class="s">-a, --attach</span>        <span class="c1"># attach stdout/err</span>
+  <span class="s">-i, --interactive</span>   <span class="c1"># attach stdin</span>
+
+<span class="s">docker stop [options] CONTAINER</span>
+</code></pre></div></div>
+
+<p>Start/stop a <code class="language-plaintext highlighter-rouge">container</code>.</p>
+
+<h3 id="docker-ps"><code class="language-plaintext highlighter-rouge">docker ps</code></h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps
+$ docker ps -a
+$ docker kill $ID
+</code></pre></div></div>
+
+<p>Manage <code class="language-plaintext highlighter-rouge">container</code>s using ps/kill.</p>
+
+<h2 id="images">Images</h2>
+
+<h3 id="docker-images"><code class="language-plaintext highlighter-rouge">docker images</code></h3>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker images
+  REPOSITORY   TAG        ID
+  ubuntu       12.10      b750fe78269d
+  me/myapp     latest     7b2431a8d968
+</code></pre></div></div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker images <span class="nt">-a</span>   <span class="c"># also show intermediate</span>
+</code></pre></div></div>
+
+<p>Manages <code class="language-plaintext highlighter-rouge">image</code>s.</p>
+
+<h3 id="docker-rmi"><code class="language-plaintext highlighter-rouge">docker rmi</code></h3>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">docker rmi b750fe78269d</span>
+</code></pre></div></div>
+
+<p>Deletes <code class="language-plaintext highlighter-rouge">image</code>s.</p>
+
+<h2 id="also-see">Also see</h2>
+
+<ul>
+  <li><a href="http://www.docker.io/gettingstarted/">Getting Started</a> <em>(docker.io)</em></li>
+</ul>
+
+<h1 id="dockerfile">Dockerfile</h1>
+
+<h3 id="inheritance">Inheritance</h3>
+
+<div class="language-docker highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> ruby:2.2.2</span>
+</code></pre></div></div>
+
+<h3 id="variables">Variables</h3>
+
+<div class="language-docker highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ENV</span><span class="s"> APP_HOME /myapp</span>
+<span class="k">RUN </span><span class="nb">mkdir</span> <span class="nv">$APP_HOME</span>
+</code></pre></div></div>
+
+<h3 id="initialization">Initialization</h3>
+
+<div class="language-docker highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">RUN </span>bundle <span class="nb">install</span>
+</code></pre></div></div>
+
+<div class="language-docker highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">WORKDIR</span><span class="s"> /myapp</span>
+</code></pre></div></div>
+
+<div class="language-docker highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">VOLUME</span><span class="s"> ["/data"]</span>
+<span class="c"># Specification for mount point</span>
+</code></pre></div></div>
+
+<div class="language-docker highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ADD</span><span class="s"> file.xyz /file.xyz</span>
+<span class="k">COPY</span><span class="s"> --chown=user:group host_file.xyz /path/container_file.xyz</span>
+</code></pre></div></div>
+
+<h3 id="onbuild">Onbuild</h3>
+
+<div class="language-docker highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ONBUILD RUN </span>bundle <span class="nb">install</span>
+<span class="c"># when used with another file</span>
+</code></pre></div></div>
+
+<h3 id="commands">Commands</h3>
+
+<div class="language-docker highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">EXPOSE</span><span class="s"> 5900</span>
+<span class="k">CMD</span><span class="s">    ["bundle", "exec", "rails", "server"]</span>
+</code></pre></div></div>
+
+<h3 id="entrypoint">Entrypoint</h3>
+
+<div class="language-docker highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ENTRYPOINT</span><span class="s"> ["executable", "param1", "param2"]</span>
+<span class="k">ENTRYPOINT</span><span class="s"> command param1 param2</span>
+</code></pre></div></div>
+
+<p>Configures a container that will run as an executable.</p>
+
+<div class="language-docker highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ENTRYPOINT</span><span class="s"> exec top -b</span>
+</code></pre></div></div>
+
+<p>This will use shell processing to substitute shell variables, and will ignore any <code class="language-plaintext highlighter-rouge">CMD</code> or <code class="language-plaintext highlighter-rouge">docker run</code> command line arguments.</p>
+
+<h3 id="metadata">Metadata</h3>
+
+<div class="language-docker highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">LABEL</span><span class="s"> version="1.0"</span>
+</code></pre></div></div>
+
+<div class="language-docker highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">LABEL</span><span class="s"> "com.example.vendor"="ACME Incorporated"</span>
+<span class="k">LABEL</span><span class="s"> com.example.label-with-value="foo"</span>
+</code></pre></div></div>
+
+<div class="language-docker highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">LABEL</span><span class="s"> description="This text illustrates \</span>
+that label-values can span multiple lines."
+</code></pre></div></div>
+
+<h2 id="see-also">See also</h2>
+
+<ul>
+  <li><a href="https://docs.docker.com/engine/reference/builder/">https://docs.docker.com/engine/reference/builder/</a></li>
+</ul>
+
+<h1 id="docker-compose">docker-compose</h1>
+
+<h3 id="basic-example">Basic example</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># docker-compose.yml</span>
+<span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2'</span>
+
+<span class="na">services</span><span class="pi">:</span>
+  <span class="na">web</span><span class="pi">:</span>
+    <span class="na">build</span><span class="pi">:</span> <span class="s">.</span>
+    <span class="c1"># build from Dockerfile</span>
+    <span class="na">context</span><span class="pi">:</span> <span class="s">./Path</span>
+    <span class="na">dockerfile</span><span class="pi">:</span> <span class="s">Dockerfile</span>
+    <span class="na">ports</span><span class="pi">:</span>
+     <span class="pi">-</span> <span class="s2">"</span><span class="s">5000:5000"</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+     <span class="pi">-</span> <span class="s">.:/code</span>
+  <span class="na">redis</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">redis</span>
+</code></pre></div></div>
+
+<h3 id="commands-1">Commands</h3>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose start
+docker-compose stop
+</code></pre></div></div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose pause
+docker-compose unpause
+</code></pre></div></div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose ps
+docker-compose up
+docker-compose down
+</code></pre></div></div>
+
+<h2 class="-three-column" id="reference">Reference</h2>
+
+<h3 id="building">Building</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">web</span><span class="pi">:</span>
+  <span class="c1"># build from Dockerfile</span>
+  <span class="na">build</span><span class="pi">:</span> <span class="s">.</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># build from custom Dockerfile</span>
+  <span class="na">build</span><span class="pi">:</span>
+    <span class="na">context</span><span class="pi">:</span> <span class="s">./dir</span>
+    <span class="na">dockerfile</span><span class="pi">:</span> <span class="s">Dockerfile.dev</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># build from image</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">ubuntu</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">ubuntu:14.04</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">tutum/influxdb</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">example-registry:4000/postgresql</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">a4bc65fd</span>
+</code></pre></div></div>
+
+<h3 id="ports">Ports</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s2">"</span><span class="s">3000"</span>
+    <span class="pi">-</span> <span class="s2">"</span><span class="s">8000:80"</span>  <span class="c1"># guest:host</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># expose ports to linked services (not to host)</span>
+  <span class="na">expose</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">3000"</span><span class="pi">]</span>
+</code></pre></div></div>
+
+<h3 id="commands-2">Commands</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># command to execute</span>
+  <span class="na">command</span><span class="pi">:</span> <span class="s">bundle exec thin -p </span><span class="m">3000</span>
+  <span class="na">command</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">bundle</span><span class="pi">,</span> <span class="nv">exec</span><span class="pi">,</span> <span class="nv">thin</span><span class="pi">,</span> <span class="nv">-p</span><span class="pi">,</span> <span class="nv">3000</span><span class="pi">]</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># override the entrypoint</span>
+  <span class="na">entrypoint</span><span class="pi">:</span> <span class="s">/app/start.sh</span>
+  <span class="na">entrypoint</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">php</span><span class="pi">,</span> <span class="nv">-d</span><span class="pi">,</span> <span class="nv">vendor/bin/phpunit</span><span class="pi">]</span>
+</code></pre></div></div>
+
+<h3 id="environment-variables">Environment variables</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># environment vars</span>
+  <span class="na">environment</span><span class="pi">:</span>
+    <span class="na">RACK_ENV</span><span class="pi">:</span> <span class="s">development</span>
+  <span class="na">environment</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">RACK_ENV=development</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># environment vars from file</span>
+  <span class="na">env_file</span><span class="pi">:</span> <span class="s">.env</span>
+  <span class="na">env_file</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">.env</span><span class="pi">,</span> <span class="nv">.development.env</span><span class="pi">]</span>
+</code></pre></div></div>
+
+<h3 id="dependencies">Dependencies</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># makes the `db` service available as the hostname `database`</span>
+  <span class="c1"># (implies depends_on)</span>
+  <span class="na">links</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">db:database</span>
+    <span class="pi">-</span> <span class="s">redis</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># make sure `db` is alive before starting</span>
+  <span class="na">depends_on</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">db</span>
+</code></pre></div></div>
+
+<h3 id="other-options">Other options</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># make this service extend another</span>
+  <span class="na">extends</span><span class="pi">:</span>
+    <span class="na">file</span><span class="pi">:</span> <span class="s">common.yml</span>  <span class="c1"># optional</span>
+    <span class="na">service</span><span class="pi">:</span> <span class="s">webapp</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="na">volumes</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">/var/lib/mysql</span>
+    <span class="pi">-</span> <span class="s">./_data:/var/lib/mysql</span>
+</code></pre></div></div>
+
+<h2 id="advanced-features">Advanced features</h2>
+
+<h3 id="labels">Labels</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">services</span><span class="pi">:</span>
+  <span class="na">web</span><span class="pi">:</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="s">com.example.description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Accounting</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">app"</span>
+</code></pre></div></div>
+
+<h3 id="dns-servers">DNS servers</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">services</span><span class="pi">:</span>
+  <span class="na">web</span><span class="pi">:</span>
+    <span class="na">dns</span><span class="pi">:</span> <span class="s">8.8.8.8</span>
+    <span class="na">dns</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">8.8.8.8</span>
+      <span class="pi">-</span> <span class="s">8.8.4.4</span>
+</code></pre></div></div>
+
+<h3 id="devices">Devices</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">services</span><span class="pi">:</span>
+  <span class="na">web</span><span class="pi">:</span>
+    <span class="na">devices</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s2">"</span><span class="s">/dev/ttyUSB0:/dev/ttyUSB0"</span>
+</code></pre></div></div>
+
+<h3 id="external-links">External links</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">services</span><span class="pi">:</span>
+  <span class="na">web</span><span class="pi">:</span>
+    <span class="na">external_links</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">redis_1</span>
+      <span class="pi">-</span> <span class="s">project_db_1:mysql</span>
+</code></pre></div></div>
+
+<h3 id="hosts">Hosts</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">services</span><span class="pi">:</span>
+  <span class="na">web</span><span class="pi">:</span>
+    <span class="na">extra_hosts</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">somehost:192.168.1.100"</span>
+</code></pre></div></div>
+
+<h3 id="sevices">sevices</h3>
+<p>To view list of all the services runnning in swarm</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker service ls 
+
+</code></pre></div></div>
+<p>To see all running services</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker stack services stack_name
+</code></pre></div></div>
+<p>to see all services logs</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker service logs stack_name service_name 
+</code></pre></div></div>
+<p>To scale services quickly across qualified node</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker service scale stack_name_service_name=replicas
+</code></pre></div></div>
+<h3 id="clean-up">clean up</h3>
+
+<p>To clean or prune unused (dangling) images</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker image prune 
+</code></pre></div></div>
+<p>To remove all images which are not in use containers , add - a</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker image prune -a 
+</code></pre></div></div>
+<p>To prune your entire system</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker system prune 
+</code></pre></div></div>
+<p>To leave swarm</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker swarm leave  
+</code></pre></div></div>
+<p>To remove swarm ( deletes all volume data and database info)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker stack rm stack_name  
+</code></pre></div></div>
+<p>To kill all running containers</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker kill $(docekr ps -q ) 
+</code></pre></div></div>
+
+<h2 id="contributors">Contributors</h2>
+
+<p><a href="https://twitter.com/BiradarSangam">Sangam biradar</a> - Docker Community Leader <br>
+<a href="https://twitter.com/ajeetsraina">Ajeet Singh Raina</a> - Docker Captain, Collabnix</p>
+
+<h2 id="support-and-community">Support and Community</h2>
+
+<p>If you do get enough interest to contributer to this Cheat Sheet, the community at Collabnix is available to support you.
+Feel free to raise PR and get your favorite Cheat Sheet added to the list via <a href="https://github.com/collabnix/dockerlabs/pulls">PR</a>, or you can connect to us either on Slack or Discord server.</p>
+
+<h2 id="other-cheat-sheets">Other Cheat Sheets</h2>
+
+<ul>
+  <li><a href="https://collabnix.com/kubectl-cheatsheet/">Kubectl Cheat Sheet</a></li>
+  <li><a href="https://dockerlabs.collabnix.com/intermediate/docker-compose/compose-cheatsheet.html">Docker Compose Cheat Sheet</a></li>
+</ul>
+
+
+    
+      
+      <footer class="site-footer">
+        
+       
+     
+              <h3> Practice Docker Tutorial </h3>
+        <button> <a href="https://www.onworks.net/runos/start-os.html?home=init&amp;os=ubuntu-16.04.6-desktop-i386"> free Ubuntu VM </a></button>
+    
+        <div class="hackr-widget" data-tutorial="dockerlabs-docker-and-kubernetes" data-type="1"></div><script src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/widget.js"></script>
+        
+        <h3> Join Collabnix Discord Channel </h3>
+        
+       <iframe src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/widget.html" width="830" height="500" allowtransparency="true" frameborder="0"></iframe>
+       <div class="twitter-timeline twitter-timeline-rendered" style="display: flex; width: 1200px; max-width: 100%; margin-top: 0px; margin-bottom: 0px;"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 832px; height: 500px; display: block; flex-grow: 1;" title="Twitter Timeline" src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/collabnix.html"></iframe></div> <script async="" src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/widgets.js" charset="utf-8"></script>
+
+             
+          <span class="site-footer-owner"><a href="https://github.com/collabnix/dockerlabs">dockerlabs</a> is maintained by <a href="https://github.com/collabnix">collabnix</a>.</span>
+        
+              
+       <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com/">GitHub Pages</a>.
+         <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async="" defer="" src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/7198565.js"></script>
+<!-- End of HubSpot Embed Code -->
+         <div id="wcb" class="carbonbadge"><style>#wcb{--b1:#0e11a8;--b2:#00ffbc;font-size:15px;text-align:center;color:var(--b1)}#wcb sub{vertical-align:middle;position:relative;top:.3em;font-size:.7em}#wcb_2,#wcb_a,#wcb_g{display:inline-flex;justify-content:center;align-items:center;text-align:center;font-size:1em;line-height:1.15;font-family:-apple-system,BlinkMacSystemFont,sans-serif;text-decoration:none;margin:.2em 0}#wcb_a,#wcb_g{padding:.3em .5em;border:.13em solid var(--b2)}#wcb_g{border-radius:.3em 0 0 .3em;background:#fff;border-right:0;min-width:8.2em}#wcb_a{border-radius:0 .3em .3em 0;border-left:0;background:var(--b1);color:#fff;font-weight:700;border-color:var(--b1)}.wcb-d #wcb_a{color:var(--b1);background:var(--b2);border-color:var(--b2)}.wcb-d #wcb_2{color:#fff}</style><div id="wcb_p"><span id="wcb_g">0.67g of CO<sub>2</sub>/view</span><a id="wcb_a" target="_blank" rel="noopener" href="https://websitecarbon.com/">Website Carbon</a></div><span id="wcb_2">&nbsp;Cleaner than 37% of pages tested</span></div>
+<script src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/b.min.js" defer=""></script>
+        </span> 
+      </footer>
+    </main>
+    <!-- Place this tag in your head or just before your close body tag. -->
+<script async="" defer="" src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/buttons.js"></script>
+  
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/widget_iframe.2b2d73daf636805223fb11d48f3e94f7.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./The Ultimate Docker Cheat Sheet _ dockerlabs_files/saved_resource.html"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
