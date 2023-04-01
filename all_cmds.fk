@@ -8,3 +8,7 @@ docker build <dockerfile_path>
 docker volume create <volume_name>
 docker compose up
 docker compose down
+
+docker run --name trial_db -p 5432:5432 -e POSTGRES_PASSWORD=meow -d postgres   #directly postgres official img
+
+docker exec -it <container_name> bash
